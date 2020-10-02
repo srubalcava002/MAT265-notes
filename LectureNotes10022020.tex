@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\title{Lecture Notes 10/02/2020}
+\date{10/02/2020}
+
+\begin{document}
+\maketitle
+
+\section{The Exponential Function}
+\textbf{Definition}: 
+\[f(x) = a^x\]
+Where $x > 1$ and $a \neq 0$\\
+Its domain is $(-\infty, \infty)$ and its range is $(0, \infty)$\\\\
+\textbf{Proposition}: $f(x) = a^x$\\
+When $a > 1$
+\[\lim_{x \to -\infty}a^x = 0\]
+\[\lim_{x \to \infty}a^x = \infty\]
+When $0 < a < 1$
+\[\lim_{x \to -\infty}a^x = \infty\]
+\[\lim_{x \to \infty}a^x = 0\]
+
+\subsection{Evalutating Limits of Exponential Functions}
+\textbf{Evaluate} $\lim_{x \to \infty}\frac{2}{5^x}$\\\\
+Take the two out
+\[2\frac{1}{5^x}\]
+Direct substitution
+\[2(\frac{1}{5^\infty})\]
+Simplify
+\[2(0) = 0\]\\
+\textbf{Evaluate} $\lim_{x \to \infty}\frac{2-5x}{2+3(5)^x}$\\\\
+Divide by the highest degree of $x$
+\[\frac{5^x(\frac{2}{5^x} - 1)}{5^x(\frac{2}{5^x} + 3)}\]
+Simplify and direct substitution
+\[\frac{1(\frac{2}{5^\infty} - 1)}{1(\frac{2}{5^\infty} + 3)} = \frac{(0 - 1)}{(0 + 3)} = -\frac{1}{3}\]
+\textbf{Evaluate} $\lim_{x \to -\infty} e^{7x}sin(x)$\\
+Break into two functions
+\[h(x) = e^{7x}, g(x) = sin(x)\]
+Use the Squeeze Theorem
+\[-1 \leq sin(x) \leq 1\]
+\[-e^{7x} \leq e^{7x}sin(x) \leq e^{7x}\]
+\textit{Note}: $h(x) = e^{7x}$ can bee seen as the amplitude of $g(x) = sin(x)$\\
+Now take the limits
+\[\lim_{x \to -\infty}-e^{7x} = 0\]
+\[\lim_{x \to \infty}e^{7x} = 0\]
+We get
+\[\lim_{x \to -\infty}e^{7x}sin(x) = 0\]
+\subsubsection{Cool identities}
+\[a^{x+y} = a^x + a^y\]
+\[a^{x-y} = \frac{a^x}{a^y}\]
+\[(a^x)^y = a^{xy}\]
+\[(ab)^x = a^x b^x\]
+\end{document}
