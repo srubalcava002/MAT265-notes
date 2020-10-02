@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\title{Lecture Notes 09/30/2020}
+\date{09/30/2020}
+
+\begin{document}
+\maketitle
+\section{Differentials}
+\textbf{Definition}: \[dy = f'(x)dx\]\\
+\textit{Remark}: If you divide both sides by $dx$, you get the Leibniz notation for derivative; $\frac{dy}{dx}$\\\\
+For example: Find $dy$ when $f(x) = \sqrt{x^2+1}$\\\\
+\[f'(x) = \frac{x}{\sqrt{x^2+1}}\]
+\[dy = f'(x)dx \to dy = \frac{x}{\sqrt{x^2+1}}dx\]
+\subsection{Product Rule for Differentials}
+$y$ is a composite function; $y = f(x)g(x)$, so using the product rule gets us:
+\[dy = g(x)df + f(x)dg\]
+There's a proof for this in the lecture notes
+\subsection{Quotient Rule for Differentials}
+Like the product rule, $y$ is a composite function; $\frac{f(x)}{g(x)}$
+\[dy = \frac{g(x)df - f(x)dg}{(g(x))^2}\]
+There's also an epic proof for this in the lecture notes.\newpage
+Now we get an example problem: Find the differential, $dw$, of $w = x^{15}cos(2x)$\\\\
+The derivative of $f(x)$, $df$, is:
+\[df = 15x^{14}\]
+Likewise, the derivative of $g(x)$, $dg$, is:
+\[dg = -2sin(2x)\]
+Now, just plug $df$ and $dg$ into the product rule equation.\\
+\textit{Remark}: You're probably gonna have to memorize the product and quotient rule equations.
+\[dw = g(x)df + f(x)dg \to dw = 15x^{14}cos(2x)dx - 2x^{15}sin(2x)dx\]
+\textit{Note}: Remember to put in $dx$
+\section{Error}
+\textbf{Definiton}: Your relative error as a percentage is: \[\frac{\Delta Q}{Q}\]
+Where: $Q$ is the quantity measured and $\Delta Q$ is the actual error\\\\
+Currently, I'm not sure exactly what all this is. Maybe error for linearization? Anyways, let's do an example:\\
+Talking about the volume of a sphere with a radius of .7 inches, the max error is .01 inches.\\\\
+First, the derivative of the formula for volume of a sphere.
+\[V = \frac{4}{3}\pi r^3\]
+\[V' = 4\pi r^2\]
+Now, the values from the formulas.
+\[r = .7, dr = .01\]
+Now we plug everything in (into the differential formula?).\\
+\textit{Note}: $dV$ is the same thing as $\Delta V$?
+\[dV = V'(r)dr \to dv = 4\pi (.7)^2 * .01 = .0616 in^3\]
+Now for the percentage error. The formula for percentage error of the volume, $V$, is:
+\[\frac{\Delta V}{V} \to \frac{4\pi r^3 dr}{\frac{4}{3}\pi r^2}\]
+Simplify to get:
+\[\frac{3dr}{r}\]
+Plug in your values.
+\[\frac{3(.01)}{(.7)} \to .0429 (4.29\%)\]
+\end{document}
